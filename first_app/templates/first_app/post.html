@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -45,8 +47,20 @@
       </div>
     </nav>
 
-    <div class="container">
-      <h1>Hello, world!</h1>
+    <div class="container mt-4">
+      <div class="my-3">
+        <img
+          src="https://picsum.photos/id/{{post.id}}/300/200"
+          class="d-block w-100"
+          alt="..."
+        />
+        <div class="border p-4">
+          <h2>
+            <a class="nav-link" href="/post/{{ post.id }}">{{ post.title }}</a>
+          </h2>
+          <p>{{ post.body }}</p>
+        </div>
+      </div>
     </div>
 
     <script
